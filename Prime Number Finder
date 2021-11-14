@@ -13,15 +13,15 @@ fig=plt.figure(figsize=(10,10))
 
 lower=1          
 upper=200        
-l=list(sympy.primerange(lower,upper+1))   #[31,37,41,43,47,53,59]
-print(l)
+prime_list=list(sympy.primerange(lower,upper+1))  
+print(prime_list)
 
-x=np.zeros((len(l)))
-result=np.arange(1,2*(len(l)),2)
+x=np.zeros((len(prime_list)))
+result=np.arange(1,2*(len(prime_list)),2)
 
-plt.plot(result,l,'rs',markersize=3)
+plt.plot(result,prime_list,'rs',markersize=3)
 plt.title("Primes Numbers Plot",fontsize=30)
 plt.xlabel("Position of Prime in List of Primes",fontsize=25)
 plt.ylabel("Value of Prime",fontsize=25)
 plt.grid(color='black', linestyle='--', linewidth=1) 
-plt.show()
+plt.show() #shows the final plot
