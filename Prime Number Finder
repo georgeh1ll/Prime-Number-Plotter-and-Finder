@@ -1,0 +1,24 @@
+
+"""
+Created on Sun Nov 14 14:33:33 2021
+
+@author: Georgehill
+"""
+
+import sympy
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+lower=1          
+upper=200        
+l=list(sympy.primerange(lower,upper+1))   #[31,37,41,43,47,53,59]
+print(l)
+
+x=np.zeros((len(l)))
+result=np.arange(1,2*(len(l)),2)
+
+plt.plot(result,l,'rs',markersize=3)
+plt.title("PrImes Numbers Plot")
+plt.xlabel("Number of Prime in List of Primes")
+plt.ylabel("Value of Prime")
